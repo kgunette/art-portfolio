@@ -1,0 +1,423 @@
+---
+layout: default
+---
+
+{% assign project_data = site.data.projects | where: "id", page.project_id | first %}
+
+<nav class="project-nav-top">
+    <a href="{{ '/' | relative_url }}">← back to all projects</a>
+</nav>
+
+<section class="project-details-section">
+    <div class="project-details-content">
+        <div class="project-details-header">
+            <h1>{{ project_data.title }}</h1>
+        </div>
+        <div class="project-details-text">
+            <p><strong>{{ project_data.year }}</strong></p>
+            <p>{{ project_data.medium }}</p>
+            {% if project_data.collaborator %}
+                <p><strong>Collaboration with:</strong> {{ project_data.collaborator }}</p>
+            {% endif %}
+            {% if project_data.collaborators %}
+                <p><strong>Collaborators:</strong> {{ project_data.collaborators }}</p>
+            {% endif %}
+            {% if project_data.dimensions %}
+                <p><strong>Dimensions:</strong> {{ project_data.dimensions }}</p>
+            {% endif %}
+            {% if project_data.installation_type %}
+                <p><strong>Type:</strong> {{ project_data.installation_type }}</p>
+            {% endif %}
+            {% if project_data.role %}
+                <p><strong>Role:</strong> {{ project_data.role }}</p>
+            {% endif %}
+            {% if project_data.edition %}
+                <p><strong>Edition:</strong> {{ project_data.edition }}</p>
+            {% endif %}
+            {% if project_data.location %}
+                <p><strong>Location:</strong> {{ project_data.location }}</p>
+            {% endif %}
+            {% if project_data.commissioned_by %}
+                <p><strong>Commissioned by:</strong> {{ project_data.commissioned_by }}</p>
+            {% endif %}
+            {% if project_data.curated_by %}
+                <p><strong>Curated by:</strong> {{ project_data.curated_by }}</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+    
+<section class="project-description">
+    {{ project_data.description | markdownify }}
+</section>
+
+<section class="project-images-container">
+{% assign image_count = project_data.images.size %}
+{% for image in project_data.images %}
+  {% assign index = forloop.index0 %}
+  {% assign group_position = index | modulo: 6 %}
+  
+  {% comment %} Pattern 1: Large left, 2 small right {% endcomment %}
+  {% if group_position == 0 %}
+    <div class="project-row">
+      <div class="project-large">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="{{ '/assets/images/' | append: project_data.id | append: '/' | append: image.filename | relative_url }}" 
+                    alt="{{ image.caption | default: project_data.title }}">
+                {% if image.caption %}
+                <div class="image-caption">{{ image.caption }}</div>
+                {% endif %}
+            </div>
+        </div>
+      </div>
+      <div class="project-small-stack">
+  {% elsif group_position == 1 or group_position == 2 %}
+        <div class="project-card">
+            <div class="project-image">
+                <img src="{{ '/assets/images/' | append: project_data.id | append: '/' | append: image.filename | relative_url }}" 
+                    alt="{{ image.caption | default: project_data.title }}">
+                {% if image.caption %}
+                <div class="image-caption">{{ image.caption }}</div>
+                {% endif %}
+            </div>
+        </div>
+  {% endif %}
+  
+  {% comment %} Close first pattern and start second {% endcomment %}
+  {% if group_position == 2 %}
+      </div>
+    </div>
+    
+    {% comment %} Pattern 2: 2 small left, large right {% endcomment %}
+    <div class="project-row">
+      <div class="project-small-stack">
+  {% elsif group_position == 3 or group_position == 4 %}
+        <div class="project-card">
+            <div class="project-image">
+                <img src="{{ '/assets/images/' | append: project_data.id | append: '/' | append: image.filename | relative_url }}" 
+                    alt="{{ image.caption | default: project_data.title }}">
+                {% if image.caption %}
+                <div class="image-caption">{{ image.caption }}</div>
+                {% endif %}
+            </div>
+        </div>
+  {% elsif group_position == 5 %}
+      </div>
+      <div class="project-large">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="{{ '/assets/images/' | append: project_data.id | append: '/' | append: image.filename | relative_url }}" 
+                    alt="{{ image.caption | default: project_data.title }}">
+                {% if image.caption %}
+                <div class="image-caption">{{ image.caption }}</div>
+                {% endif %}
+            </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  
+  {% comment %} Handle incomplete groups at the end {% endcomment %}
+  {% if forloop.last %}
+    {% if group_position == 0 %}
+      </div></div>
+    {% elsif group_position == 1 or group_position == 2 %}
+      </div></div>
+    {% elsif group_position == 3 or group_position == 4 %}
+      </div></div>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Handle video embed if present {% endcomment %}
+{% if project_data.video_embed %}
+    <figure class="video-embed">
+        <div class="video-wrapper">
+            <iframe src="{{ project_data.video_embed | replace: 'watch?v=', 'embed/' }}" 
+                    frameborder="0" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+        {% if project_data.video_caption %}
+            <figcaption>{{ project_data.video_caption }}</figcaption>
+        {% endif %}
+    </figure>
+{% endif %}
+</section>
+
+<nav class="project-nav">
+    <a href="{{ '/' | relative_url }}">← back to all projects</a>
+</nav>
+
+<style>
+    .project-details-section {
+        background-color: #3d7574;
+        margin: 0 -2rem 30px -2rem;
+        padding: 3rem 2rem;
+    }
+
+    .project-details-content {
+        display: flex;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 3rem;
+    }
+
+    .project-details-header {
+        flex-shrink: 0;
+        width: 300px;
+    }
+
+    .project-details-header h1 {
+        color: white;
+        font-size: 1.3em;
+        margin: 0;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-left: 2rem;
+    }
+
+    .project-details-text {
+        flex: 1;
+        color: white;
+        font-size: 0.95em;
+        line-height: 1.6;
+        padding-left: 4rem;
+    }
+
+    .project-details-text p {
+        margin: 0 0 0.5rem 0;
+    }
+
+    .project-details-text strong {
+        color: white;
+        font-weight: 600;
+    }
+
+    .project-description {
+        margin-left: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .project-images-container {
+        margin: 30px 0;
+    }
+
+    .project-row {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    .project-large {
+        flex: 2;
+    }
+
+    .project-small-stack {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project-card { 
+        border-radius: 0;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        cursor: pointer;
+    }
+
+    .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .project-image {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .image-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0,0,0,0.8));
+        color: white;
+        padding: 20px 15px 15px;
+        font-size: 0.85em;
+        line-height: 1.3;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+        opacity: 0;
+    }
+
+    .project-card:hover .image-caption {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .project-large .project-image {
+        height: 40vw;
+        max-height: 550px;
+        min-height: 300px;
+    }
+
+    .project-small-stack .project-image {
+        height: calc((40vw - 30px) / 2);
+        max-height: calc((550px - 30px) / 2);
+        min-height: calc((300px - 30px) / 2);
+    }
+
+    .project-image img { 
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    .video-embed {
+        margin: 30px 0;
+        border: 1px solid #ddd;
+        padding: 8px;
+        background-color: #fafafa;
+    }
+
+    .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Force incomplete patterns to respect container constraints */
+    .project-row .project-large,
+    .project-row .project-small-stack {
+        flex-shrink: 1;
+        flex-basis: 0;
+    }
+
+    .project-large {
+        flex-grow: 2;
+        max-width: 66.67%; /* 2/3 of container */
+    }
+
+    .project-small-stack {
+        flex-grow: 1;
+        max-width: 33.33%; /* 1/3 of container */
+    }
+
+    /* Ensure images never exceed their container */
+    .project-image {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    /* Prevent full-width spanning on incomplete rows */
+    .project-row:last-child .project-large,
+    .project-row:last-child .project-small-stack {
+        flex-shrink: 1;
+    }
+
+    .project-nav-top {
+        margin: 0 0 30px 2rem;
+        padding: 0;
+    }
+
+    /* This is the "back to all projects" nav at top of page" */
+    .project-nav-top a {
+        text-decoration: none;
+        color: #3d7574;
+        font-size: 0.85em;
+        font-weight: 500;
+    }
+
+    .project-nav-top a:hover {
+        text-decoration: underline;
+    }
+
+    .project-nav { 
+        margin-top: 40px; 
+        padding-top: 20px; 
+        border-top: 1px solid #eee;
+        margin-left: 2rem;
+    }
+
+    /* This is the "back to all projects" nav at bottom of page" */
+    .project-nav a { 
+        text-decoration: none; 
+        color: #3d7574;
+        font-size: 0.85em; 
+        font-weight: 500;
+    }
+
+    .project-nav a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+        .project-row {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .project-large,
+            .project-small-stack {
+                width: 100%;
+                max-width: 500px; /* Constrain width on mobile */
+            }
+
+        .project-large .project-image,
+        .project-small-stack .project-image {
+            height: 300px !important;
+            width: 100%;
+        }
+        
+        .project-image img {
+        object-fit: cover;
+        object-position: center; /* Ensure centering */
+        width: 100%;
+        height: 100%;
+    }
+
+        .project-small-stack {
+            gap: 20px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .project-details-content {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .project-details-text {
+            padding-left: 2rem;
+        }
+        
+        .project-details-header {
+            width: auto;
+        }
+        .project-details-header h1 {
+        margin-left: 2rem; /* Keep alignment with nav on mobile */
+    }
+    
+    .project-description {
+        margin-left: 2rem; /* Keep alignment with nav on mobile */
+    }
+}
+</style>

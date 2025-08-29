@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karen Schoellkopf Art Portfolio</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+/* HEADER */
+        .header { 
+            margin-bottom: 30px; 
+            padding-bottom: 20px;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        header nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+        header nav a {
+            text-decoration: none;
+            color: #3d7574;
+        }
+        main {
+            flex: 1;
+        }   
+/* PROJECTS THUMBNAIL IMAGE DISPLAY */
+        .projects-container {
+            margin-top: 2rem;
+        }
+
+        .project-row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .project-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .project-large {
+            flex: 2;
+        }
+
+        .project-small-stack {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+       .project-large .project-image {
+            height: 40vw;
+            max-height: 550px;
+            min-height: 300px;
+        }
+
+        .project-small-stack .project-image {
+            height: calc((40vw - 30px) / 2); /* Half the large image height minus gap */
+            max-height: calc((550px - 30px) / 2);
+            min-height: calc((300px - 30px) / 2);
+        }
+
+        @media (max-width: 900px) {
+            .project-row {
+                flex-direction: column;
+            }
+            
+            .project-row.reverse {
+                flex-direction: column;
+            }
+            
+            .project-large .project-image,
+            .project-small-stack .project-image {
+                height: 300px;
+            }
+            
+            .project-small-stack {
+                gap: 20px;
+            }
+        }
+
+    /* Force incomplete patterns to respect container constraints */
+    .project-row .project-large,
+    .project-row .project-small-stack {
+        flex-shrink: 1;
+        flex-basis: 0;
+    }
+
+    .project-large {
+        flex-grow: 2;
+        max-width: 66.67%; /* 2/3 of container */
+    }
+
+    .project-small-stack {
+        flex-grow: 1;
+        max-width: 33.33%; /* 1/3 of container */
+    }
+
+    /* Ensure images never exceed their container */
+    .project-image {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    /* Prevent full-width spanning on incomplete rows */
+    .project-row:last-child .project-large,
+    .project-row:last-child .project-small-stack {
+        flex-shrink: 1;
+    }
+
+/* PROJECT CARDS */
+        .project-card { 
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .project-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .project-image {
+            position: relative;
+            width: 100%;
+            height: 300px;
+        }
+
+        .project-image img { 
+            width: 100%; 
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 30px 20px 20px;
+        }
+
+        .project-overlay h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.2em;
+            color: white;
+        }
+
+        .project-overlay .project-year {
+            margin: 0;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        h1 { color: #333; }
+        h3 { color: #555; }
+
+/* ABOUT HEADER */        
+        .about-section {
+            background-color: #3d7574;
+            margin: -20px -20px 30px -20px;
+            padding: 3rem 2rem;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 3rem;
+        }
+
+        .about-header {
+            flex-shrink: 0;
+            width: 150px;
+        }
+        .about-header h1,
+        h2 {
+            margin-left: 2rem; /* This matches the nav padding */
+        }
+
+        .about-header h1 {
+            color: white;
+        }
+
+        .about-header h2 {
+            color: white;
+            font-size: 1.3em;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .about-text {
+            flex: 1;
+            color: white;
+            font-size: 0.95em;
+            line-height: 1.6;
+            padding-left: 3rem;
+        }
+
+        .about-text p {
+            margin: 0;
+        }
+
+        .about-text strong {
+            color: white;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .about-text {
+                padding-left: 0;
+            }
+            
+            .about-header {
+                width: auto;
+            }
+        }  
+        
+        
+        .cv-section {
+            background-color: #3d7574;
+            margin: -20px -20px 30px -20px;
+            padding: 3rem 2rem;
+}
+/* CV HEADER */   
+        .cv-content {
+            display: flex;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 3rem;
+        }
+
+        .cv-header {
+            flex-shrink: 0;
+            width: 300px;
+        }
+
+        .cv-header h1 {
+            color: white;
+            font-size: 1.3em;
+            margin: 0;
+            font-weight: 600;
+            margin-left: 2rem;
+        }
+
+        .cv-text {
+            flex: 1;
+            color: white;
+            font-size: 0.95em;
+            line-height: 1.6;
+            padding-left: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .cv-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .cv-text {
+                padding-left: 0;
+            }
+            
+            .cv-header {
+                width: auto;
+            }
+            
+            .cv-header h1 {
+                margin-left: 2rem;
+            }
+        }
+
+/* CV BODY */   
+        .cv-body {
+            margin: 2rem 0;
+        }
+
+        .cv-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+            gap: 4rem;
+        }
+
+        .cv-section-header {
+            flex-shrink: 0;
+            width: 200px;
+            margin: 0 0 0 2rem; /* Aligns with navigation */
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .cv-section-content {
+            flex: 1;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .cv-section-content a {
+            color: #753d3e;
+            text-decoration: none;
+        }
+
+        .cv-section-content a:hover {
+            color: #3d7574;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .cv-item {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .cv-section-header {
+                width: auto;
+            }
+        }
+
+
+/* CONTACT HEADER */   
+            .contact-section {
+            background-color: #3d7574;
+            margin: -20px -20px 30px -20px;
+            padding: 3rem 2rem;
+        }
+
+        .contact-content {
+            display: flex;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 3rem;
+        }
+
+        .contact-header {
+            flex-shrink: 0;
+            width: 300px;
+        }
+
+        .contact-header h1 {
+            color: white;
+            font-size: 1.3em;
+            margin: 0;
+            font-weight: 600;
+            margin-left: 2rem;
+        }
+
+        .contact-text {
+            flex: 1;
+            color: white;
+            font-size: 0.95em;
+            line-height: 1.6;
+            padding-left: 3rem;
+        }
+
+        .contact-text h2 {
+            color: white;
+            margin: 0 0 1rem 0;
+        }
+
+        .contact-text p {
+            margin: 0;
+        }
+
+        .contact-text a {
+            color: #b1c8c7;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .contact-text a:hover {
+            color: white;
+            border-bottom-color: white;
+        }
+
+        @media (max-width: 768px) {
+            .contact-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .contact-text {
+                padding-left: 0;
+            }
+            
+            .contact-header {
+                width: auto;
+            }
+            
+            .contact-header h1 {
+                margin-left: 2rem;
+            }
+        }
+
+/* CONTACT BODY */
+        .contact-body {
+            margin: 2rem 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+            gap: 4rem;
+        }
+
+        .contact-section-header {
+            flex-shrink: 0;
+            width: 200px;
+            margin: 0 0 0 2rem; /* Aligns with navigation */
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .contact-section-content {
+            flex: 1;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .contact-section-content a {
+            color: #753d3e;
+            text-decoration: none;
+        }
+
+        .contact-section-content a:hover {
+            color: #3d7574;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .contact-item {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .contact-section-header {
+                width: auto;
+            }
+        }
+
+/* FOOTER */      
+        footer {
+            margin-top: 4rem;
+            padding: 3rem 2rem 2rem;
+            background-color: #3d7574;
+            border-top: 2px solid #ddd;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 3rem;
+        }
+
+        .footer-left {
+            flex: 1;
+        }
+
+        .footer-brooklyn {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+        }
+
+        .footer-copyright {
+            font-size: 0.9em;
+            color: #FFFFFF;
+            line-height: 1.5;
+        }
+
+        .footer-right {
+            flex: 1;
+            text-align: right;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-social img {
+            width: 24px;
+            height: 24px;
+            transition: opacity 0.2s ease;
+        }
+
+        .footer-social a:hover img {
+            opacity: 0.7;
+        }
+
+        .footer-newsletter {
+            font-size: 0.85em;
+            color: #FFFFFF;
+            line-height: 1.4;
+            max-width: 300px;
+            margin-left: auto;
+        }
+
+        .footer-newsletter a {
+            color: #b1c8c7;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .footer-newsletter a:hover {
+            color: #333;
+            border-bottom-color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .footer-right {
+                text-align: left;
+            }
+            
+            .footer-social {
+                justify-content: flex-start;
+            }
+            
+            .footer-newsletter {
+                margin-left: 0;
+                max-width: none;
+            }
+        }    
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <h1><a href="/">Karen Schoellkopf Art Portfolio</a></h1>
+            <ul>
+                <li><a href="/">projects</a></li>
+                <li><a href="/cv">cv</a></li>
+                <li><a href="/contact">contact & credits</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="about-section">
+    <div class="about-content">
+        <div class="about-header">
+            <h1>about</h1>
+        </div>
+        <div class="about-text">
+            <p>Karen Schoellkopf is a multi-disciplinary artist. She has an MFA from the School of Visual Arts, a decade of experience in the art world, and another decade of experience working in the tech industry. Schoellkopf has been exhibiting artwork in the US and abroad since 1998. She began to cross-pollinate her work with technology in 2009. In collaboration with the Times Square Alliance, she exhibited an open source mapping project, "The Seven Deadly Sins of New York." Her art rigor and critical practice has dipped over into tech advocacy by creating <strong>Hire More Women In Tech</strong> in 2014, and co-launching <strong>realnames.online</strong> in late 2016. She also sang with a Ukrainian folk choir for 3 years, but listen, not everything in life is linear.</p>
+        </div>
+    </div>
+</section>
+
+<h2 id="projects">projects</h2>
+
+<div class="projects-container">
+
+
+
+  
+  
+  
+  
+  
+    <div class="project-row">
+      <div class="project-large">
+        <div class="project-card">
+          <a href="/projects/ukrainian-village-voices/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/ukrainian-village-voices/uvv-01-album.jpg" alt="Ukrainian Village Voices" />
+              <div class="project-overlay">
+                <h3>Ukrainian Village Voices</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="project-small-stack">
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+        <div class="project-card">
+          <a href="/projects/jobs-and-passions/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/jobs-and-passions/jp-01-katrin.jpg" alt="Jobs &amp; Passions" />
+              <div class="project-overlay">
+                <h3>Jobs &amp; Passions</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+        <div class="project-card">
+          <a href="/projects/waterfronts/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/waterfronts/wf-01-boat.jpg" alt="Waterfronts" />
+              <div class="project-overlay">
+                <h3>Waterfronts</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+  
+  
+  
+      </div>
+    </div>
+    
+    
+    <div class="project-row">
+      <div class="project-small-stack">
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+        <div class="project-card">
+          <a href="/projects/visible-cities/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/visible-cities/vc-01.jpg" alt="Visible Cities" />
+              <div class="project-overlay">
+                <h3>Visible Cities</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+        <div class="project-card">
+          <a href="/projects/seven-deadly-sins-installation/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/seven-deadly-sins-installation/sdsi-01-installation.jpg" alt="The Seven Deadly Sins of Times Square (Installation)" />
+              <div class="project-overlay">
+                <h3>The Seven Deadly Sins of Times Square (Installation)</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+      </div>
+      <div class="project-large">
+        <div class="project-card">
+          <a href="/projects/the-heart-is-more-than-a-muscle/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/the-heart-is-more-than-a-muscle/thm-01-heart.jpg" alt="The Heart is More Than a Muscle" />
+              <div class="project-overlay">
+                <h3>The Heart is More Than a Muscle</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+    <div class="project-row">
+      <div class="project-large">
+        <div class="project-card">
+          <a href="/projects/abt/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/abt/abt-01-main.jpg" alt="abt" />
+              <div class="project-overlay">
+                <h3>abt</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="project-small-stack">
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+        <div class="project-card">
+          <a href="/projects/seven-deadly-sins-poster/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/seven-deadly-sins-poster/sdsp-01-poster.jpg" alt="The Seven Deadly Sins of Times Square" />
+              <div class="project-overlay">
+                <h3>The Seven Deadly Sins of Times Square</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+        <div class="project-card">
+          <a href="/projects/love-letter-to-berlin/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/love-letter-to-berlin/lltb-01-azusa-book.jpg" alt="Love Letter to Berlin" />
+              <div class="project-overlay">
+                <h3>Love Letter to Berlin</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+  
+  
+  
+      </div>
+    </div>
+    
+    
+    <div class="project-row">
+      <div class="project-small-stack">
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+        <div class="project-card">
+          <a href="/projects/homes/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/homes/homes-01-door.jpg" alt="Homes" />
+              <div class="project-overlay">
+                <h3>Homes</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+        <div class="project-card">
+          <a href="/projects/juan-was-here/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/juan-was-here/jwh-01-installation.png" alt="Juan Was Here" />
+              <div class="project-overlay">
+                <h3>Juan Was Here</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+      </div>
+      <div class="project-large">
+        <div class="project-card">
+          <a href="/projects/trees/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/trees/tr-01.jpg" alt="Trees" />
+              <div class="project-overlay">
+                <h3>Trees</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+    <div class="project-row">
+      <div class="project-large">
+        <div class="project-card">
+          <a href="/projects/the-wedding-gift/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/the-wedding-gift/twg-01-open.jpg" alt="The Wedding Gift" />
+              <div class="project-overlay">
+                <h3>The Wedding Gift</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="project-small-stack">
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+        <div class="project-card">
+          <a href="/projects/crush-cards/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/crush-cards/cc-01-installation.jpg" alt="Crush Cards" />
+              <div class="project-overlay">
+                <h3>Crush Cards</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+        <div class="project-card">
+          <a href="/projects/people-miss-their-native-lands/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/people-miss-their-native-lands/pmtnl-01-cover.jpg" alt="People Miss Their Native Lands" />
+              <div class="project-overlay">
+                <h3>People Miss Their Native Lands</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+  
+  
+  
+      </div>
+    </div>
+    
+    
+    <div class="project-row">
+      <div class="project-small-stack">
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+        <div class="project-card">
+          <a href="/projects/innerviews/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/innerviews/iv-01-momenta-installation.jpg" alt="Innerviews" />
+              <div class="project-overlay">
+                <h3>Innerviews</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+        <div class="project-card">
+          <a href="/projects/gotcha/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/gotcha/gotcha-01-spine.jpg" alt="Gotcha" />
+              <div class="project-overlay">
+                <h3>Gotcha</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+      </div>
+      <div class="project-large">
+        <div class="project-card">
+          <a href="/projects/brooklyn/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/brooklyn/bk-01-watertower.jpg" alt="Brooklyn" />
+              <div class="project-overlay">
+                <h3>Brooklyn</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+    <div class="project-row">
+      <div class="project-large">
+        <div class="project-card">
+          <a href="/projects/exhibiting-symptoms/" class="project-link">
+            <div class="project-image">
+              <img src="/assets/images/exhibiting-symptoms/es-01-wheelchair.jpg" alt="Exhibiting Symptoms" />
+              <div class="project-overlay">
+                <h3>Exhibiting Symptoms</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="project-small-stack">
+  
+  
+  
+  
+  
+  
+  
+    
+      </div></div>
+    
+  
+
+</div>
+
+    </main>
+    
+    <footer>
+    <div class="footer-content">
+        <div class="footer-left">
+            <div class="footer-brooklyn">made with ❤️ in brooklyn</div>
+            <div class="footer-copyright">
+                <em>All rights reserved, Karen Schoellkopf, 1999-2025. <br>Please do not reproduce images without permission.</em>
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="footer-social">
+                <a href="https://www.instagram.com/kgunette/">
+                    <img src="/assets/images/instagram-logo-white.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/karenschoellkopf/">
+                    <img src="/assets/images/linkedin-logo-white.png" alt="LinkedIn">
+                </a>
+            </div>
+            <div class="footer-newsletter">
+                Infrequent newsletter sign up here - to hear about what I'm up to in the realm of making things.
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

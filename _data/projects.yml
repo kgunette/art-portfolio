@@ -1,0 +1,523 @@
+- id: crush-cards
+  title: "Crush Cards"
+  description: |
+    This project sprang out of a desire to get people talking to the people it's hardest to be honest with: crushes. The crush (or the encounter) may have lasted one night, or have been stretching on silently for months, so Diana and I designed a to-the-point method of saying what you are too shy to say. 
+
+    Inspired by 4th grade note passing, we set up the installation with a limiteless supply of cards and envelopes. Diana carved and stained the wood holders with her father. To our surprise, we refilled the installation several times before the evening was out. And more than one person came up to me afterwards to admit they had found a crush card which had been slipped into their bag or pocket. 
+
+    We deemed the project a success, and look forward to future projects which continue to follow a similar mode of audience interaction.
+  year: 2004
+  sort_year: 2004
+  medium: "Cards, envelopes, ink, wooden holders"
+  collaborator: "Diana Parrington"
+  dimensions: "Variable dimensions"
+  installation_type: "Replenishable installation"
+  thumbnail: "crush-cards/cc-01-installation.jpg"
+  images:
+    - filename: "cc-01-installation.jpg"
+      caption: "Crush Cards installation view"
+    - filename: "cc-02-detail.jpg"
+      caption: "Detail of cards and wooden holders"
+    - filename: "cc-03-interaction.jpg"
+      caption: "Audience interaction with the installation"
+
+- id: juan-was-here
+  title: "Juan Was Here"
+  description: |
+    This piece was commissioned by the Brooklyn Arts Council.
+
+    My jumping off point was the 20th poem from Pablo Neruda's "Twenty Love Poems and One Song of Despair". He wrote them when he was 19. The English translation of his poems always run alongside the original Spanish (most often by the most trusted translator of Neruda, W. S. Merwin). I have then run the English and the Spanish through online English/Spanish translator programs, back and forth on a continuous loop, and have printed out the original with all of the mistranslations. They are nestled in a Spanish - English dictionary.
+  year: 2008
+  sort_year: 2008
+  medium: "Langenscheidt Spanish-English dictionary (1988) owned by Juan García (1993), colored paper, glue, poem XX from Pablo Neruda"
+  commissioned_by: "Brooklyn Arts Council"
+  thumbnail: "juan-was-here/jwh-01-installation.png"
+  images:
+    - filename: "jwh-01-installation.png"
+      caption: "Juan Was Here installation view"
+    - filename: "jwh-02-detail1.jpg"
+      caption: "Juan Was Here Detail 1"
+    - filename: "jwh-03-detail2.jpg"
+      caption: "Juan Was Here Detail 2"
+
+- id: the-heart-is-more-than-a-muscle
+  title: "The Heart is More Than a Muscle"
+  description: |
+    [Description to be added]
+  year: 2012
+  sort_year: 2012
+  medium: "Silkscreen prints, edition of 10 + 1 AP, set of 5 prints/singles"
+  dimensions: "5-1/2 by 6-3/4 inches, numbered & signed"
+  thumbnail: "the-heart-is-more-than-a-muscle/thm-01-heart.jpg"
+  images:
+    - filename: "thm-01-heart.jpg"
+      caption: "Heart print"
+    - filename: "thm-02-spine.jpg"
+      caption: "Spine print"
+    - filename: "thm-03-liver.jpg"
+      caption: "Liver print"
+    - filename: "thm-04-teeth.jpg"
+      caption: "Teeth print"
+    - filename: "thm-05-hand.jpg"
+      caption: "Hand print"
+
+- id: seven-deadly-sins-installation
+  title: "The Seven Deadly Sins of Times Square (Installation)"
+  description: |
+    The Seven Deadly Sins of Times Square is a web-based map project that seeks to tie together, assemble, and present the rich historical dangers, pitfalls, and glories of Times Square. It attempts to be part regional travel guide, part map, part history lesson, part morbid fascination. 
+
+    All of the information highlighted in the project is all publicly accessible and findable online (all links are included), and the code was built as open source, so that it can be utilized by others. You are invited to explore this map, and discover the layered history hidden beneath the modern veneer. 
+
+    This project was done with the help of the very talented Patrick Filler (all things code) and Kim Ku (designer extraordinaire). Initially created as a public art project for The Work Office, this was a new version created for gallery installation, with cards that people can take with them, highlighting data points from the map.
+  year: 2012
+  sort_year: 2012
+  medium: "3 1/2' x 3 1/2' metal grid, refillable standard postcards on grid"
+  dimensions: "Installation dimensions variable"
+  collaborators: "Patrick Filler (code), Kim Ku (design)"
+  installation_type: "Gallery installation"
+  thumbnail: "seven-deadly-sins-installation/sdsi-01-installation.jpg"
+  images:
+    - filename: "sdsi-01-installation.jpg"
+      caption: "Installation view"
+    - filename: "sdsi-02-statement.jpg"
+      caption: "Artist statement"
+    - filename: "sdsi-03-audience1.jpg"
+      caption: "Audience view 1"
+    - filename: "sdsi-04-audience2.jpg"
+      caption: "Audience view 2"
+    - filename: "sdsi-05-audience3.jpg"
+      caption: "Audience view 3"
+
+- id: seven-deadly-sins-poster
+  title: "The Seven Deadly Sins of Times Square"
+  description: |
+    The Seven Deadly Sins of Times Square is a web-based map project that seeks to tie together, assemble, and present the rich historical dangers, pitfalls, and glories of Times Square. It attempts to be part regional travel guide, part map, part history lesson, part morbid fascination. 
+
+    All of the information highlighted in the project is all publicly accessible and findable online (all links are included), and the code was built as open source, so that it can be utilized by others. You are invited to explore this map, and discover the layered history hidden beneath the modern veneer. 
+
+    This project was done with the help of the very talented Patrick Filler (all things code) and Kim Ku (designer extraordinaire). Created as a public art project for The Work Office, the poster was installed on garbage cans and signs in the shared public space in the middle of Times Square. Curated by Katarina Jerinic and Naomi Miller.
+  year: 2011
+  sort_year: 2011
+  medium: "Website, posters"
+  collaborators: "Patrick Filler (code), Kim Ku (design)"
+  curated_by: "Katarina Jerinic and Naomi Miller"
+  commissioned_by: "The Work Office"
+  thumbnail: "seven-deadly-sins-poster/sdsp-01-poster.jpg"
+  images:
+    - filename: "sdsp-01-poster.jpg"
+      caption: "Project poster"
+    - filename: "sdsp-02-poster-situ.jpg"
+      caption: "Poster in situ in Times Square"
+    - filename: "sdsp-03-website.jpg"
+      caption: "Website screenshot"
+    - filename: "sdsp-04-flyer.jpg"
+      caption: "TWO flyer"      
+
+- id: abt
+  title: "abt"
+  description: |
+   A unique, handmade, handbound book, for ABT. 
+  year: 2011
+  sort_year: 2011
+  medium: "Handmade book on paper, includes handwritten text and photos, handbound, unique"
+  dimensions: "2 x 3 inches"
+  thumbnail: "abt/abt-01-main.jpg"
+  images:
+    - filename: "abt-01-main.jpg"
+      caption: "Main view"
+    - filename: "abt-02-side.jpg"
+      caption: "Side view"      
+
+- id: love-letter-to-berlin
+  title: "Love Letter to Berlin"
+  description: |
+    A love letter to Berlin, but also to Malmö, Buffalo, and Brooklyn.
+
+    "Love letter to berlin explores profound love, loss and absence, in the abstract and in the concrete, of the visible and invisible landscapes we travel. The book looks deeply into memory and forward into possibility, traveling among many cities, sensing what echoes in the empty spaces inside an apartment, and what joy exists in the embrace of two people, walking arm in arm through an unknown city."
+    — Liz Tascio, writer
+  year: 2009
+  sort_year: 2009
+  medium: "book of prose, innerbooks inket print, outer cover letter pressed, handbound"
+  dimensions: "4 x 5 inches"
+  edition: "Edition of 100 (numbered & signed)"
+  thumbnail: "love-letter-to-berlin/lltb-01-azusa-book.jpg"
+  images:
+    - filename: "lltb-01-azusa-book.jpg"
+      caption: "Azusa with book"
+    - filename: "lltb-02-cover.jpg"
+      caption: "Book cover"
+    - filename: "lltb-03-interior.jpg"
+      caption: "Book interior"
+    - filename: "lltb-04-letterpress.jpg"
+      caption: "Letterpress set-up"      
+
+- id: homes
+  title: "Homes"
+  description: |
+    We are interested in the concept of home: what makes it comfortable, how much space you need, and how our experience of our apartments shapes our ideas of home. Diana and I decided to build a home together by superimposing floorplans of our existing Brooklyn apartments, overlapping and intertwining the walls and furniture of each place to the other. 
+
+    The apartments are represented in actual size, and much of the furniture was placed in the spaces from memory.
+  year: 2008
+  sort_year: 2008
+  medium: "Red and yellow gaffers tape"
+  dimensions: "60 ft x 30 ft room"
+  collaborator: "Diana Parrington"
+  installation_type: "Site specific installation"
+  location: "Spool MFG Gallery"
+  thumbnail: "homes/homes-01-door.jpg"
+  images:
+    - filename: "homes-01-door.jpg"
+      caption: "Installation view with door"
+    - filename: "homes-02-windows.jpg"
+      caption: "Installation view with windows"
+    - filename: "homes-03-floor.jpg"
+      caption: "Installation view floor"
+    - filename: "homes-04-people.jpg"
+      caption: "Installation view with people"
+    - filename: "homes-05-mockup.jpg"
+      caption: "Installation mockup"      
+
+- id: visible-cities
+  title: "Visible Cities"
+  description: |
+    I have been working on this project of photographs of light, all taken in transit in various cities throughout the world, either from a subway, train, car, scooter, or plane. I began this project as a different way to approach landscape photography, and was delighted to find the abstract environments I could create, within the eye of the camera.
+
+    This project is a shift for me from my usual subject of environmental portraiture, which has been a main focus for the past 15 years. I began taking these pictures in spaces that did not exist, in-between spaces, spaces in transition, cities beneath or above the actual cities. These pictures for me are also a leap into an abstracted emotional terrain, a place to experience that has no defining characteristic of a "city", but very much a specific emotional landscape.
+
+    "The man who is traveling and does not yet know the city awaiting him along his route wonders what the palace will be like, the barracks, the mill, the theater, the bazaar. In every city of the empire every building is different and set in a different order: but as soon as the stranger arrives at the unknown city, and his eye penetrates the pine cone of pagodas and garrets and haymows, following the scrawl of canals, gardens, rubbish heaps, he immediately distinguishes which are the princes' palaces, the high priests' temples, the tavern, the prison, the slum. This —some say— confirms the hypothesis that each man bears in his mind a city made only of differences, a city without figures and without form, and the individual cities fill it up."
+    — Italo Calvino, Invisible Cities
+  year: "2006-2016"
+  sort_year: 2016
+  medium: "Digital C-prints"
+  dimensions: "20 x 30 inches"
+  thumbnail: "visible-cities/vc-01.jpg"
+  images:
+    - filename: "vc-01.jpg"
+      caption: "Visible Cities 1"
+    - filename: "vc-02.jpg"
+      caption: "Visible Cities 2"
+    - filename: "vc-03.jpg"
+      caption: "Visible Cities 3"
+    - filename: "vc-04.jpg"
+      caption: "Visible Cities 4"
+    - filename: "vc-05.jpg"
+      caption: "Visible Cities 5"
+    - filename: "vc-06.jpg"
+      caption: "Visible Cities 6"
+    - filename: "vc-07.jpg"
+      caption: "Visible Cities 7"
+    - filename: "vc-08.jpg"
+      caption: "Visible Cities 8"
+    - filename: "vc-09.jpg"
+      caption: "Visible Cities 9"
+    - filename: "vc-10.jpg"
+      caption: "Visible Cities 10"
+    - filename: "vc-11.jpg"
+      caption: "Visible Cities 11"
+    - filename: "vc-12.jpg"
+      caption: "Visible Cities 12"
+    - filename: "vc-13.jpg"
+      caption: "Visible Cities 13"
+    - filename: "vc-14.jpg"
+      caption: "Visible Cities 14"
+    - filename: "vc-15.jpg"
+      caption: "Visible Cities 15"
+    - filename: "vc-16.jpg"
+      caption: "Visible Cities 16"
+    - filename: "vc-17.jpg"
+      caption: "Visible Cities 17"
+    - filename: "vc-18.jpg"
+      caption: "Visible Cities 18"
+    - filename: "vc-19.jpg"
+      caption: "Visible Cities 19"
+    - filename: "vc-20.jpg"
+      caption: "Visible Cities 20"
+    - filename: "vc-21.jpg"
+      caption: "Visible Cities 21"
+    - filename: "vc-22.jpg"
+      caption: "Visible Cities 22"
+    - filename: "vc-23.jpg"
+      caption: "Visible Cities 23"
+    - filename: "vc-24.jpg"
+      caption: "Visible Cities 24"
+    - filename: "vc-25.jpg"
+      caption: "Visible Cities 25"
+    - filename: "vc-26.jpg"
+      caption: "Visible Cities 26"
+    - filename: "vc-27.jpg"
+      caption: "Visible Cities 27"
+    - filename: "vc-28.jpg"
+      caption: "Visible Cities 28"
+    - filename: "vc-29.jpg"
+      caption: "Visible Cities 29"
+    - filename: "vc-30.jpg"
+      caption: "Visible Cities 30"
+    - filename: "vc-31.jpg"
+      caption: "Visible Cities 31"      
+
+- id: waterfronts
+  title: "Waterfronts"
+  description: |
+    Much of this work is taken in Buffalo, NY (my hometown). It is a series I am taking on the waterfront, and the areas surrounding the now defunct, or largely abandoned industries of steel and grain. Buffalo used to be the main repository for grain for the east coast, on its way to other destinations, and the steel industry dominated Buffalo's economy and job market for decades, until Bethlehem Steel closed its doors in 1989. Buffalo's economy and landscape have been drastically altered by these two industries, and many current policy and economic decisions are based on this rich, but abandoned, past.
+
+    You can read more about the region [here](https://en.wikipedia.org/wiki/Buffalo,_New_York).
+  year: "2006-2016"
+  sort_year: 2016
+  medium: "Digital C-prints"
+  dimensions: "20 x 30 inches"
+  thumbnail: "waterfronts/wf-01-boat.jpg"
+  images:
+    - filename: "wf-01-boat.jpg"
+      caption: "Boat"
+    - filename: "wf-02-pigeon-island.jpg"
+      caption: "Pigeon Island"
+    - filename: "wf-03-factory-train.jpg"
+      caption: "Factory with train"
+    - filename: "wf-04-power-lines.jpg"
+      caption: "Power lines"
+    - filename: "wf-05-grain-elevator.jpg"
+      caption: "Grain elevator"
+    - filename: "wf-06-two-grain-elevators.jpg"
+      caption: "Two grain elevators"
+    - filename: "wf-07-buoys.jpg"
+      caption: "Buoys"
+    - filename: "wf-08-bethlehem-steel.jpg"
+      caption: "Bethlehem Steel Corp"
+    - filename: "wf-09-grain-silo.jpg"
+      caption: "Grain silo"
+    - filename: "wf-10-truck-party.jpg"
+      caption: "Truck party"
+    - filename: "wf-11-bethlehem-reclaimed.jpg"
+      caption: "Bethlehem Steel reclaimed by nature"
+
+- id: trees
+  title: "Trees"
+  description: |
+    These are images taken in Buffalo, NY (my hometown). They are a series of trees that sustained extensive damage throughout the region, due to an early snowstorm in October 2006, where heavy wet snow on the leaves weighed down the trees, broke them, and caused such major devastation to the entire area that it was declared a national disaster.
+
+    I have photographed these trees in a time of transition and change. They are living things changed by crisis, literally still standing, and adapting.
+  year: "2006-2007"
+  sort_year: 2007
+  medium: "Digital C-prints"
+  dimensions: "20 x 30 inches"
+  location: "Buffalo, NY"
+  thumbnail: "trees/tr-01.jpg"
+  images:
+    - filename: "tr-01.jpg"
+      caption: "Trees 1"
+    - filename: "tr-02.jpg"
+      caption: "Trees 2"
+    - filename: "tr-03.jpg"
+      caption: "Trees 3"
+    - filename: "tr-04.jpg"
+      caption: "Trees 4"
+    - filename: "tr-05.jpg"
+      caption: "Trees 5"
+    - filename: "tr-06.jpg"
+      caption: "Trees 6"
+    - filename: "tr-07.jpg"
+      caption: "Trees 7"
+    - filename: "tr-08.jpg"
+      caption: "Trees 8"
+    - filename: "tr-09.jpg"
+      caption: "Trees 9"
+    - filename: "tr-10.jpg"
+      caption: "Trees 10"
+    - filename: "tr-11.jpg"
+      caption: "Trees 11"
+    - filename: "tr-12.jpg"
+      caption: "Trees 12"
+    - filename: "tr-13.jpg"
+      caption: "Trees 13"   
+
+- id: jobs-and-passions
+  title: "Jobs & Passions"
+  description: |
+    This project focuses on jobs and passions, and where those two areas of our lives intersect and diverge. Here my questions center around peoples' ideas of what "work" should be, when dreams should be followed and when they should be subordinated to what "has to be done" to survive, and how people negotiate the relationship between getting paid and following their dreams.
+  year: "2004-2016"
+  sort_year: 2016
+  medium: "Color digital prints, with text"
+  thumbnail: "jobs-and-passions/jp-01-katrin.jpg"
+  images:
+    - filename: "jp-01-katrin.jpg"
+      caption: "Katrin"
+    - filename: "jp-02-ian.jpg"
+      caption: "Ian"
+    - filename: "jp-03-rick.jpg"
+      caption: "Rick"
+    - filename: "jp-04-megha.jpg"
+      caption: "Megha"
+    - filename: "jp-05-crito-heather.jpg"
+      caption: "Crito & Heather"
+    - filename: "jp-06-adesh-lara.jpg"
+      caption: "Adesh & Lara"
+    - filename: "jp-07-dan.jpg"
+      caption: "Dan"
+    - filename: "jp-08-corey.jpg"
+      caption: "Corey"
+    - filename: "jp-09-sigrid.jpg"
+      caption: "Sigrid"
+    - filename: "jp-10-megan.jpg"
+      caption: "Megan"
+    - filename: "jp-11-jeff.jpg"
+      caption: "Jeff"
+    - filename: "jp-12-matt-larisa.jpg"
+      caption: "Matt & Larisa"
+    - filename: "jp-13-rebecca.jpg"
+      caption: "Rebecca"
+
+- id: the-wedding-gift
+  title: "The Wedding Gift"
+  description: |
+    This project sprang out of trying to figure out what to get two separate couples, who were getting married. Each couple had lived with each other for a while, and seemed to have pretty much all they'd need. I decided that my gift to them would be advice from others, about what they should know in the coming years - what people felt was the most important thing a newlywed couple should know. 
+
+    I interviewed and photographed people on the streets of Brooklyn. The plexiglass is covered in plastic and paper flaps, which open to reveal the advice, and an image of the person who gave it. The flaps have different line drawings of instructions about how to tie knots.
+  year: 2005
+  sort_year: 2005
+  medium: "Plexiglass, plastic, velcro, adhesive, polaroid, transparency, paper, ink"
+  dimensions: "16-1/2 x 16-1/2 inches"
+  edition: "2 unique pieces (inscribed to Kevin Thurston and his wife Christine, and to Dan Toulson and his wife Dorothy)"
+  thumbnail: "the-wedding-gift/twg-01-open.jpg"
+  images:
+    - filename: "twg-01-open.jpg"
+      caption: "The Wedding Gift (open)"
+    - filename: "twg-02-closed.jpg"
+      caption: "The Wedding Gift (closed)"
+
+- id: innerviews
+  title: "Innerviews"
+  description: |
+    *Catcalling: n, a shrill whistle or cry used to express disapproval (from Webster's Universal Dictionary and Thesaurus, 1993, Geddes & Grosset, Ltd, Scotland)*
+
+    *Street abuse:*
+    1. *To hurt, on a public road, by treating badly*
+    2. *Unintentional degradation through ignorance*
+    3. *To imply a physical and/or emotional threat through gestures or posture*
+    4. *Coarse, deceptive, or insulting language*
+    5. *Unsolicited physical contact*
+    6. *To stalk for purposes of either psychological or physical harm*
+    7. *Unequal access on public roads*
+    *(from [Maggie Hadleigh-West's site](https://www.yomaggie.com/))*
+
+    My project "Innerviews" is grounded in the idea of exchange. In the context of this project, exchange is the way that we, as a community, give and receive reciprocally; an interchange. Often times I have felt powerless to participate in a dialogue with catcallers, because the comments were simply being said at me.
+
+    This project completes the give and take by talking back. I have interviewed many different people to discuss catcalling, and its impact on our shared public space. The installation of books of these interviews invites the viewer to explore the pieces of this investigation, to open and touch and engage in the exchange, and to respond back in a journal set up next to the piece with comments or suggestions.
+
+    I initially viewed catcalling as aggressive or negative attention, but this project constructs another way of engaging with it. I do not think catcalling is an issue to be polarized as "right" or "wrong". It is a complicated issue that needs to be explored and discussed, to better understand why it exists. Through a better understanding of what motivates this behavior, I hope that people will become aware of their contribution to creating the atmosphere of this city.
+  year: 2003
+  sort_year: 2003
+  medium: "3 1/2' x 3 1/2' metal grid, 25 5\"x5\" books on each grid, small table w/ journal"
+  dimensions: "Installation dimensions variable"
+  installation_type: "Interactive installation"
+  thumbnail: "innerviews/iv-01-momenta-installation.jpg"
+  images:
+    - filename: "iv-01-momenta-installation.jpg"
+      caption: "Momenta installation"
+    - filename: "iv-02-momenta-people.jpg"
+      caption: "Momenta installation with people"
+    - filename: "iv-03-starr-gallery.jpg"
+      caption: "Starr Gallery installation"
+    - filename: "iv-04-brooklyn-art-center.jpg"
+      caption: "Brooklyn Art Center installation"
+
+- id: people-miss-their-native-lands
+  title: "People Miss Their Native Lands"
+  description: |
+    A unique, handmade, handbound book, for SJ. 
+  year: 2003
+  sort_year: 2003
+  medium: "Handmade book on paper (for SJ), includes collage, handwritten text, board, and plexiglass, handbound"
+  dimensions: "5 x 7 inches"
+  edition: "Unique (for SJ)"
+  thumbnail: "people-miss-their-native-lands/pmtnl-01-cover.jpg"
+  images:
+    - filename: "pmtnl-01-cover.jpg"
+      caption: "Cover"
+    - filename: "pmtnl-02-front-open.jpg"
+      caption: "Front open"
+    - filename: "pmtnl-03-back-open.jpg"
+      caption: "Back open"
+      
+- id: brooklyn
+  title: "Brooklyn"
+  description: |
+    Almost invariably, when one thinks of a successful artist, the first image that comes to mind is the lone individual, a man, painting with incredible seriousness and gravity a large canvas in a large room: the driven individual alone, in the throes of expression, a romantic figure. In training, we are encouraged to think in series, to create a cohesive body of "mature" work. We seek not to reject this, but to explore other possibilities for expression and communication.
+
+    We began working on this book as a way to experiment with a medium that has fascinated both of us for quite some time: the book. Drawing from a rich history of sequential art, ranging from the dime store comic book, to the underground proliferation of xeroxed "zines", to the highly produced (and priced) "artist book", we decided to take what we thought was the best the medium has to offer. We are interested in producing something tactile, something that the viewer can hold in the palm of his or her hand, something intimate. We like the idea of producing a work, which is relatively cheap to purchase, a non-exclusive commodity that is available to all.
+
+    As a partnership, we seek not to absolve the individual of responsibility for the product but to foster productivity through community, to become more effective through collaboration and to create work that is intimate and widely accessible. We seek to remove some of the deadly gravity from the process of creation without affecting the quality or the importance of the work, and this book is the first in a series of projects we hope to produce for this end.
+  year: 2002
+  sort_year: 2002
+  medium: "Silkscreen book on paper, handbound"
+  dimensions: "4 x 6 inches"
+  collaborator: "Megan Gavin"
+  edition: "Numbered edition of 30, unsigned"
+  thumbnail: "brooklyn/bk-01-watertower.jpg"
+  images:
+    - filename: "bk-01-watertower.jpg"
+      caption: "Book open - watertower"
+    - filename: "bk-02-chairs.jpg"
+      caption: "Book open - chairs"
+    - filename: "bk-03-closed.jpg"
+      caption: "Two books closed"
+
+- id: gotcha
+  title: "Gotcha"
+  description: |
+    A unique, handmade, handbound book, for RJA. 
+  year: 2002
+  sort_year: 2002
+  medium: "Handmade book on paper (for RJA), includes collage, handwritten text, handbound"
+  dimensions: "5 x 7 inches"
+  edition: "Unique (for RJA)"
+  thumbnail: "gotcha/gotcha-01-spine.jpg"
+  images:
+    - filename: "gotcha-01-spine.jpg"
+      caption: "Spine"
+    - filename: "gotcha-02-open.jpg"
+      caption: "Open"
+    - filename: "gotcha-03-closed.jpg"
+      caption: "Closed"                       
+
+- id: exhibiting-symptoms
+  title: "Exhibiting Symptoms"
+  description: |
+    This was an art piece involving text and image, which addressed having a debilitating disease. The subject matter was based on my mother, and her battle with acute multiple sclerosis. This project explored my mother's battle with the disease, and examined the effects of sickness on all members of the family.
+  year: 1999
+  sort_year: 1999
+  medium: "Black and white photographs, black and white slides, projectors, handwritten text scrawled on long sheets of transparency"
+  dimensions: "Installation dimensions variable, photographs sized 1\" x 3\" – 20\" x 24\", mounted"
+  installation_type: "Mixed media installation"
+  thumbnail: "exhibiting-symptoms/es-01-wheelchair.jpg"
+  images:
+    - filename: "es-01-wheelchair.jpg"
+      caption: "Wheelchair"
+    - filename: "es-02-installation1.jpg"
+      caption: "Installation 1"
+    - filename: "es-03-installation2.jpg"
+      caption: "Installation 2"
+    - filename: "es-04-flyer.jpg"
+      caption: "Flyer"
+
+- id: ukrainian-village-voices
+  title: "Ukrainian Village Voices"
+  description: |
+    UVV sings in the polyphonic village style and its repertoire is constantly evolving, frequently focusing on seasonal celebrations, ritual songs, as well as lyrical music. We often sing songs recorded by ethnomusicologists from the oldest dwellers of villages in Ukraine.
+
+    Since 2013, the ensemble has performed for a wide range of audiences in the New York metropolitan area and other locales in New York State, as well as in Canada. Venues have ranged from folk music and seasonal festivals to museums, theaters, libraries, community centers, church halls, and sidewalk, park, radio and webcast concerts. UVV has been featured at [Brooklyn Folk Festival](http://brooklynfolkfest.com/), [Zlatne Uste Golden Festival](https://goldenfest.org/), Roots n' Ruckus Fest, and [Saint George Ukrainian Festival](https://www.facebook.com/StGeorgesUkrainianFestivalNYC/). [Performance CV here](https://www.ukrainianvillagevoices.com/performances)
+
+    Listen to Ukrainian Village Voices perform in studio at WFMU, on the [Transpacific Sound Paradise show](https://wfmu.org/playlists/shows/78845). Air date: Saturday, May 5, 2018.
+
+    [Ukrainian Village Voices (self-titled) album on Bandcamp](https://ukrainianvillagevoices.bandcamp.com/album/ukrainian-village-voices).
+  year: "2015-2018"
+  sort_year: 2018
+  medium: "Musical group, board member (web & digital)"
+  role: "Board Member (web & digital)"
+  thumbnail: "ukrainian-village-voices/uvv-01-album.jpg"
+  video_embed: "https://www.youtube.com/watch?v=ewsQMDQdJzs"
+  video_caption: "Oy Syvryde at Brooklyn Folk Festival, 2017"
+  images:
+    - filename: "uvv-01-album.jpg"
+      caption: "UVV album"
+    - filename: "uvv-02-performance.jpg"
+      caption: "UVV performance at Sisters"             
