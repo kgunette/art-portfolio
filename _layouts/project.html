@@ -163,6 +163,8 @@ layout: default
         max-width: 1200px;
         margin: 0 auto;
         gap: 3rem;
+        width: 2000px; /* Fixed width to prevent container resize, also Increased from 1200px */
+        min-width: 2000px; /* Prevent shrinking, also Increased from 1200px */
     }
 
     .project-details-header {
@@ -180,7 +182,8 @@ layout: default
     }
 
     .project-details-text {
-        flex: 1;
+        flex: none; /* Remove flex behavior */
+        width: 400px; /* Fixed width instead of flexible */
         color: white;
         font-size: 0.95em;
         line-height: 1.6;
