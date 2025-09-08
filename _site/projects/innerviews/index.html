@@ -43,7 +43,7 @@
             display: none;
         }
 
-        @@media (max-width: 768px) {
+        @media (max-width: 768px) {
             header nav {
                 flex-direction: column;
                 align-items: flex-start;
@@ -848,8 +848,7 @@
         max-width: 1200px;
         margin: 0 auto;
         gap: 3rem;
-        width: 2000px; /* Fixed width to prevent container resize, also Increased from 1200px */
-        min-width: 2000px; /* Prevent shrinking, also Increased from 1200px */
+        width: 100%; /* Allow it to be responsive */
     }
 
     .project-details-header {
@@ -1091,22 +1090,30 @@
         .project-details-content {
             flex-direction: column;
             gap: 1rem;
+            width: 100%;
+            min-width: unset;
+            padding: 0 2rem; /* Match the header padding */
         }
         
         .project-details-text {
-            padding-left: 2rem;
+            width: auto;
+            padding-left: 0;
         }
         
         .project-details-header {
             width: auto;
         }
         .project-details-header h1 {
-        margin-left: 2rem; /* Keep alignment with nav on mobile */
+        margin-left: 0;
     }
     
-    .project-description {
-        margin-left: 2rem; /* Keep alignment with nav on mobile */
-    }
+        .project-description {
+            margin-left: 2rem; /* Match the header padding */
+        }
+
+        .project-nav-top {
+            margin-left: 2rem; /* Align the back button too */
+        }
 }
 </style>
     </main>
